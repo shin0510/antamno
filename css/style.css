@@ -1,0 +1,565 @@
+img{
+  width: 100%;
+}
+a:hover{
+  opacity: .7;
+}
+.sp{
+  display: none;
+}
+.pc{
+  display: block;
+}
+body{
+  color: #4b4a4a;
+  border: #ff4655 12px solid;
+  box-sizing: border-box;
+}
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+header{
+  border-bottom: #ff4655 10px solid;
+}
+header nav.do {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom:25px ;
+  background-color: rgba(255,255,255,.72);
+  position: fixed;
+  width: calc(100% - 24px);
+  top: 0;
+  left: 12px;
+  z-index: 100000;
+}
+header nav.pc h1{
+  width: 80px;
+  margin: 10px 0 0 20px;
+  display: none;
+}
+header nav.do h1{
+  display: block;
+}
+header nav.do ul{
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+header nav.do ul li{
+  padding-top: 32px;
+}
+header .pc ul{
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+header .pc ul li{
+  margin: 0 17px;
+  color: #ff4655;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+header h1{
+  width: 56.67%;
+  margin: 215px auto;
+}
+header p{
+  font-size: 14px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  text-align: center;
+  color: #ff4655;
+  position: relative;
+  margin-bottom: 45px;
+}
+header p::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 45px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,100%);
+  background-color: #ff4655;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+
+}
+@keyframes pathmove{
+  0%{
+    height:0;
+    top:0;
+    opacity: 0;
+  }
+  30%{
+    height:30px;
+    opacity: 1;
+  }
+  100%{
+    height:0;
+    top:40px;
+    opacity: 0;
+  }
+}
+/* ハンバーガーメニュー */
+#g-nav{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: -120%;
+  width: 80%;
+  height: 100vh;
+  background-color: rgba(255,255,255,.65);
+  transition: all .6s;
+}
+#g-nav.active{
+  right: 0;
+}
+#g-nav ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+}
+#g-nav ul li{
+  font-size: 24px;
+  font-weight: 800;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  text-align: center;
+  background-color: #ff4655;
+  color: #ffffff;
+  border-radius: 9px;
+  padding: 10px 0;
+  margin: 20px auto;
+}
+
+.openbtn{
+	position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+	top:10px;
+	right: 10px;
+	cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+/*×に変化*/	
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #ff4655;
+  width: 32px;
+}
+
+.openbtn span:nth-of-type(1) {
+top:10px;	
+}
+
+.openbtn span:nth-of-type(2) {
+top:21px;
+}
+
+.openbtn span:nth-of-type(3) {
+top:32px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 10px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 32px;
+}
+
+.openbtn.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 10px;
+  transform: translateY(-6px) rotate(45deg);
+  width:32px;
+}
+
+
+/* header ここmで */
+/* top ここから */
+.top{
+  text-align: center;
+  padding: 80px;
+}
+.top h2{
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  color: #ff4655;
+  font-size: 41px;
+  font-weight: 600;
+}
+.top h2 span{
+  color: #c2bebf;
+}
+.top h2 span.equal{
+  color: #ff4655;
+  font-family: "小塚ゴシック Pr6N",sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  vertical-align: 10%;
+}
+.top h3{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 28px;
+  color: #ff4655;
+  margin: 37px auto 45px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+.top p{
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #4b4a4a;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 50px;
+}
+/* top ここmで */
+/* smoothie ここから */
+.title{
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-size: 41px;
+  color: #ff4655;
+  font-weight: 800;
+  text-align: center;
+}
+.title span{
+  display: inline-block;
+  width: 33px;
+  margin-right: 20px;
+}
+.smoothie>div{
+  position: relative;
+  margin: 75px 0;
+}
+.smoothie>div>div{
+  position: absolute;
+}
+.a{
+  bottom: 13%;
+  right: 5%;
+}
+.b{
+  bottom: 11%;
+  left: 5%;
+}
+.c{
+  bottom: 13%;
+  right: 5%;
+}
+.smoothie>div>div h3{
+  font-size: 28px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #000000;
+  font-weight: 700;
+}
+.smoothie>div>div p{
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #4b4a4a;
+  margin-top: 50px;
+  line-height: 40px;
+}
+
+/* smoothie ここmで */
+/* menuここから */
+.menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.menu ul li{
+  width: 20.39%;
+  text-align: center;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-size: 16px;
+}
+
+.menu h3{
+  width: 43.75%;
+  margin: 0 auto;
+}
+.menu p{
+  text-align: center;
+  color: #606565;
+  font-size: 15px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 5px 0 110px;
+}
+/* menuここmで */
+/* aboutここから */
+.about{
+  max-width: 1100px;
+}
+.about>div{
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0 100px;
+}
+.about h2{
+  width: 51%;
+}
+.about>div>div{
+  width: 44.3%;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #4a4a4a;
+  text-align: center;
+  line-height: 35px;
+}
+.about h3{
+  font-size: 24px;
+}
+.about p{
+  font-size: 20px;
+  margin-top: 34px;
+
+}
+/* aboutここmで */
+/* scheduleここから */
+.schedule{
+  padding-bottom: 65px;
+}
+ .schedule h2{
+   margin-top: 70px;
+ }
+ .schedule h3{
+   width: 92px;
+   margin: 0 auto 45px;
+ }
+ .schedule p{
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #4a4a4a;
+  font-size: 18px;
+  text-align: center;
+ }
+ .schedule ul{
+   width: 46.6%;
+   margin:  0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+ .schedule ul li{
+  width: 28.57%;
+  margin-top: 37px;
+ }
+ .schedule ul li img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ .dm{
+   margin-top: 85px;
+ }
+/* scheduleここmで */
+/* footerここから */
+footer{
+  background-color: #ff4655;
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+}
+footer h2{
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+small{
+  font-size: 10px;
+  
+}
+/* footerここmで */
+
+/* ここからスマホ */
+@media(max-width:500px){
+ .sp{
+   display: block;
+ }
+ .pc{
+   display: none;
+ }
+  /* headerここから */
+  
+  header h1{
+    width: 90%;
+    margin: 160px auto;
+  }
+  header p{
+    font-size: 10px;
+    margin-bottom: 22px;
+  }
+  header p::after{
+    height: 22px;
+  
+  }
+  
+  /* headerここmで */
+  /* topここから */
+  .top{
+    padding: 40px 0;
+  }
+  .top h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .top h2 span.equal{
+    font-size: 12px;
+  }
+  .top h3{
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin: 30px auto 30px;
+  }
+  .top p{
+    font-size: 16px;
+    line-height: 32px;
+  }
+  /* topここmで */
+  /* smoothieここから */
+  .title{
+    font-size: 28px;
+  }
+  .title span{
+    width: 22px;
+    margin-right: 10px;
+  }
+  .smoothie>div{
+    margin: 75px 0;
+  }
+  .smoothie>div>div{
+    position: absolute;
+  }
+  .a{
+    bottom: 8%;
+    left: 10%;
+  }
+  .b{
+    bottom: 5%;
+    left: 10%;
+  }
+  .c{
+    bottom: 8%;
+    left: 10%;
+  }
+  .smoothie>div>div h3{
+    font-size: 18px;
+  }
+  .smoothie>div>div p{
+    font-size: 15px;
+    margin-top: 23px;
+    line-height: 29px;
+  }
+  
+  /* smoothieここmで */
+  /* menuここから */
+  .menu ul{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .menu ul li{
+    width: 50%;
+  }
+  .menu ul li p{
+    margin: 0;
+  }
+  .menu h3{
+    width: 80%;
+    margin: 0 auto 50px;
+  }
+  .menu p{
+    font-size: 12px;
+    margin: 40px 0 15px;
+  }
+  /* menuここmで */
+  /* aboutここから */
+  .about>div{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 70px 0 50px;
+  }
+  .about h2{
+    width: 100%;
+  }
+  .about>div>div{
+    width: 100%;
+    line-height: 27px;
+    margin-bottom: 43px;
+  }
+  .about h3{
+    font-size: 18px;
+  }
+  .about p{
+    font-size: 16px;
+    margin-top: 30px;
+  
+  }
+  /* aboutここmで */
+  /* scheduleここから */
+.schedule{
+  padding-bottom: 65px;
+  text-align: center;
+}
+ .schedule h2{
+   margin-top: 30px;
+ }
+ .schedule h3{
+   width: 85px;
+   margin: 0 auto 45px;
+ }
+ .schedule p{
+  font-size: 16px;
+  display:inline-block ;
+  width: 85%;
+  margin: 0 auto;
+ }
+ .schedule ul{
+  width: 67.8%;
+
+}
+.schedule ul li{
+ width: 43.9%;
+ margin-top: 37px;
+}
+.dm{
+  margin-top: 30px !important;
+}
+/* scheduleここmで */
+/* footerここから */
+footer{
+  background-color: #ff4655;
+  text-align: center;
+  color: #fff;
+  padding: 15px 0;
+}
+footer h2{
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+small{
+  font-size: 10px;
+  
+}
+/* footerここmで */
+
+}
